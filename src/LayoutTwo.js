@@ -1,18 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import useScreenWidth from './useScreenWidth';
 
 const LayoutTwo = () => {
-  const [screenSize, setScreenSize] = useState(false);
+  const screenSize = useScreenWidth();
 
-  const checkScreenSize = () => {
-    setScreenSize(window.innerWidth < 768);
-  };
-
-  useEffect(() => {
-    checkScreenSize();
-    window.addEventListener('resize', checkScreenSize);
-
-    return () => window.removeEventListener('resize', checkScreenSize);
-  }, []);
 
   return (
     <div> Layout 2 : Browsing on {screenSize ? 'Small' : 'Large'} device </div>
