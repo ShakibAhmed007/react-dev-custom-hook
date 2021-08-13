@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Layout = () => {
+const LayoutTwo = () => {
   const [screenSize, setScreenSize] = useState(false);
 
   const checkScreenSize = () => {
@@ -15,8 +15,8 @@ const Layout = () => {
   }, []);
 
   return (
-    <div> Layout 1: Browsing on {screenSize ? 'Small' : 'Large'} device </div>
+    <div> Layout 2 : Browsing on {screenSize ? 'Small' : 'Large'} device </div>
   );
 };
 
-export default Layout;
+export default LayoutTwo;
